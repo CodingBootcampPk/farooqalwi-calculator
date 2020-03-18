@@ -50,9 +50,30 @@ namespace Simple_Calculator
                     txtResult.Text = (valOne * valTwo).ToString();
                     break;
                 case "/":
-                    txtResult.Text = (valOne / valTwo).ToString();
+                    if (txtResult.Text != "0")
+                    {
+                        txtResult.Text = (valOne / valTwo).ToString();
+                    }
+                    else
+                    {
+                        txtResult.Clear();
+                        MessageBox.Show("Cannot Divide by Zero");
+                    }
                     break;
+            }
+        }
 
+        private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you wanna close Calculator?","Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                //Auto Cancel
+            }
+            if (result == DialogResult.No)
+            {
+                txtResult.Clear();
+                e.Cancel = true;
             }
         }
     }
