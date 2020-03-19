@@ -16,6 +16,7 @@ namespace Simple_Calculator
         int valOne = 0;
         int valTwo = 0;
         string ArithOperator;
+        
         public Calculator()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
+            lblTempResult.Text = txtResult.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Simple_Calculator
             Button button = (Button)sender;
             ArithOperator = button.Text;
             valOne = Int32.Parse(txtResult.Text);
-            lblTempResult.Text = txtResult.Text + ArithOperator;
+            lblTempResult.Text = ArithOperator+txtResult.Text;
             txtResult.Clear();
         }
 
@@ -62,6 +64,8 @@ namespace Simple_Calculator
                     }
                     break;
             }
+
+            
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)

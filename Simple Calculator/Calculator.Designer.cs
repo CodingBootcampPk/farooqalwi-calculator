@@ -70,7 +70,7 @@
             this.groupBox1.Controls.Add(this.btnTwo);
             this.groupBox1.Controls.Add(this.btnEqual);
             this.groupBox1.Controls.Add(this.btnZero);
-            this.groupBox1.Location = new System.Drawing.Point(536, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 355);
             this.groupBox1.TabIndex = 0;
@@ -89,10 +89,12 @@
             // 
             // txtResult
             // 
+            this.txtResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtResult.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResult.Location = new System.Drawing.Point(7, 49);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(338, 73);
             this.txtResult.TabIndex = 1;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -282,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(900, 471);
+            this.ClientSize = new System.Drawing.Size(374, 380);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
