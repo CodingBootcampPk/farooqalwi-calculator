@@ -16,6 +16,8 @@ namespace Simple_Calculator
         int valOne = 0;
         int valTwo = 0;
         string ArithOperator;
+        string sequnce;
+        List<string> values = new List<string>();
         
         public Calculator()
         {
@@ -26,7 +28,13 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
-            lblTempResult.Text = txtResult.Text;
+            sequnce = txtResult.Text;
+            values.Add(sequnce);
+            foreach (var Value in values)
+            {
+                lblTempResult.Text = Value;
+            }
+            
         }
 
         private void operators_Click(object sender, EventArgs e)
@@ -34,7 +42,11 @@ namespace Simple_Calculator
             Button button = (Button)sender;
             ArithOperator = button.Text;
             valOne = Int32.Parse(txtResult.Text);
-            lblTempResult.Text = ArithOperator+txtResult.Text;
+            values.Add(ArithOperator);
+            foreach (var Value in values)
+            {
+                lblTempResult.Text = Value;
+            }
             txtResult.Clear();
         }
 
