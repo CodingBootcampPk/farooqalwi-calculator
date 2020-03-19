@@ -54,7 +54,7 @@ namespace Simple_Calculator
                     else
                     {
                         txtResult.Clear();
-                        MessageBox.Show("Cannot Divide by Zero");
+                        MessageBox.Show("Cannot Divide by Zero", "Divide by Zero Error");
                     }
                     break;
             }
@@ -62,16 +62,20 @@ namespace Simple_Calculator
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you wanna close Calculator?", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Want to close Calculator?", "Calculator", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 //Auto Cancel
             }
             if (result == DialogResult.No)
             {
-                txtResult.Clear();
                 e.Cancel = true;
             }
+        }
+
+        private void btnClearLbl_Click(object sender, EventArgs e)
+        {
+            txtResult.Clear();
             lblTempResult.Text = "";
         }
     }
