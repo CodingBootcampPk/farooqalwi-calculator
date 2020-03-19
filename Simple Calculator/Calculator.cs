@@ -19,6 +19,7 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
+            
             lblTempResult.Text += button.Text;
         }
 
@@ -71,6 +72,7 @@ namespace Simple_Calculator
                 txtResult.Clear();
                 e.Cancel = true;
             }
+            lblTempResult.Text = "";
         }
     }
 }
