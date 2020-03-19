@@ -33,6 +33,7 @@ namespace Simple_Calculator
             ArithOperator = button.Text;
             valOne = Int32.Parse(txtResult.Text);
             txtResult.Clear();
+            lblTempResult.Text = valOne.ToString() + valTwo.ToString();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace Simple_Calculator
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you wanna close Calculator?","Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Do you wanna close Calculator?", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 //Auto Cancel
