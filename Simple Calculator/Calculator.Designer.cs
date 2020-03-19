@@ -80,11 +80,10 @@
             // 
             this.lblTempResult.AutoSize = true;
             this.lblTempResult.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempResult.Location = new System.Drawing.Point(228, 24);
+            this.lblTempResult.Location = new System.Drawing.Point(15, 24);
             this.lblTempResult.Name = "lblTempResult";
-            this.lblTempResult.Size = new System.Drawing.Size(117, 22);
+            this.lblTempResult.Size = new System.Drawing.Size(0, 22);
             this.lblTempResult.TabIndex = 2;
-            this.lblTempResult.Text = "Temp Result";
             this.lblTempResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtResult

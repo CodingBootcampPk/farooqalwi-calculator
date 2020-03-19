@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Simple_Calculator
@@ -16,8 +9,6 @@ namespace Simple_Calculator
         int valOne = 0;
         int valTwo = 0;
         string ArithOperator;
-        string sequnce;
-        List<string> values = new List<string>();
         
         public Calculator()
         {
@@ -28,13 +19,7 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
-            sequnce = txtResult.Text;
-            values.Add(sequnce);
-            foreach (var Value in values)
-            {
-                lblTempResult.Text = Value;
-            }
-            
+            lblTempResult.Text += button.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
@@ -42,11 +27,7 @@ namespace Simple_Calculator
             Button button = (Button)sender;
             ArithOperator = button.Text;
             valOne = Int32.Parse(txtResult.Text);
-            values.Add(ArithOperator);
-            foreach (var Value in values)
-            {
-                lblTempResult.Text = Value;
-            }
+            lblTempResult.Text += ArithOperator;
             txtResult.Clear();
         }
 
@@ -76,8 +57,6 @@ namespace Simple_Calculator
                     }
                     break;
             }
-
-            
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
