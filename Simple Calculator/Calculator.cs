@@ -32,8 +32,8 @@ namespace Simple_Calculator
             Button button = (Button)sender;
             ArithOperator = button.Text;
             valOne = Int32.Parse(txtResult.Text);
+            lblTempResult.Text = txtResult.Text + ArithOperator;
             txtResult.Clear();
-            lblTempResult.Text = valOne.ToString() + valTwo.ToString();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
