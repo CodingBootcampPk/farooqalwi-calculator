@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Simple_Calculator
@@ -88,7 +89,8 @@ namespace Simple_Calculator
         {
             foreach (var item in historyList)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
+                Debug.WriteLine(item);
             }
         }
     }
