@@ -84,7 +84,11 @@ namespace Simple_Calculator
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            historyList.Add(lblTempResult.Text);
+            AddHistory(lblTempResult.Text);
+        }
+        public void AddHistory(Calculator history)
+        {
+            historyList.Add(history);
         }
     }
 }
