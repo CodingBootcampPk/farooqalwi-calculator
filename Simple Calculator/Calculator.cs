@@ -60,6 +60,9 @@ namespace Simple_Calculator
                     }
                     break;
             }
+            
+            string history = lblTempResult.Text + btnEqual.Text + txtResult.Text;
+            historyList.Add(history);
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
@@ -83,12 +86,9 @@ namespace Simple_Calculator
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-            string res = lblTempResult.Text + btnEqual.Text + txtResult.Text;
-            historyList.Add(res);
             foreach (var item in historyList)
             {
-                listBox1.Items.Add(item);
+                Console.WriteLine(item);
             }
         }
     }
