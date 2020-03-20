@@ -73,7 +73,7 @@
             this.groupBox1.Controls.Add(this.btnTwo);
             this.groupBox1.Controls.Add(this.btnEqual);
             this.groupBox1.Controls.Add(this.btnZero);
-            this.groupBox1.Location = new System.Drawing.Point(6, 34);
+            this.groupBox1.Location = new System.Drawing.Point(6, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 355);
             this.groupBox1.TabIndex = 0;
@@ -297,7 +297,7 @@
             // 
             this.btnHistory.BackColor = System.Drawing.Color.Gray;
             this.btnHistory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.Location = new System.Drawing.Point(4, 1);
+            this.btnHistory.Location = new System.Drawing.Point(4, 2);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(87, 33);
             this.btnHistory.TabIndex = 3;
@@ -310,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(364, 393);
+            this.ClientSize = new System.Drawing.Size(364, 396);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

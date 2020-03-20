@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Simple_Calculator
@@ -10,9 +9,10 @@ namespace Simple_Calculator
         //variables which are being used
         int valOne = 0;
         int valTwo = 0;
+        bool operationPerformed = false;
         string ArithOperator;
         private List<string> historyList;
-        
+
         public Calculator()
         {
             InitializeComponent();
@@ -21,18 +21,31 @@ namespace Simple_Calculator
 
         private void button_Click(object sender, EventArgs e)
         {
+            if (operationPerformed)
+            {
+                txtResult.Clear();
+            }
+            operationPerformed = false;
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
-            lblTempResult.Text += button.Text;
+            //lblTempResult.Text += button.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            ArithOperator = button.Text;
-            valOne = Int32.Parse(txtResult.Text);
-            lblTempResult.Text += ArithOperator;
-            txtResult.Clear();
+            if (valOne != 0)
+            {
+                btnEqual.PerformClick();
+                ArithOperator = button.Text;
+                operationPerformed = true;
+            }
+            else
+            {
+                ArithOperator = button.Text;
+                valOne = Int32.Parse(txtResult.Text);
+                operationPerformed = true;
+            }
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -61,7 +74,7 @@ namespace Simple_Calculator
                     }
                     break;
             }
-            
+            valOne = Int32.Parse(txtResult.Text);
             string history = lblTempResult.Text + btnEqual.Text + txtResult.Text;
             historyList.Add(history);
         }
@@ -89,8 +102,7 @@ namespace Simple_Calculator
         {
             foreach (var item in historyList)
             {
-                //Console.WriteLine(item);
-                Debug.WriteLine(item);
+                Console.WriteLine(item);
             }
         }
     }
