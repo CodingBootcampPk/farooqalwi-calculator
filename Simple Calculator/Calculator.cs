@@ -84,7 +84,8 @@ namespace Simple_Calculator
         private void btnHistory_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            historyList.Add(lblTempResult.Text);
+            string res = lblTempResult.Text + btnEqual.Text + txtResult.Text;
+            historyList.Add(res);
             foreach (var item in historyList)
             {
                 listBox1.Items.Add(item);
