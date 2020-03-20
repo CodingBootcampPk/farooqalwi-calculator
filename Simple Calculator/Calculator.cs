@@ -9,7 +9,7 @@ namespace Simple_Calculator
         //variables which are being used
         int valOne = 0;
         int valTwo = 0;
-        
+        bool operationPerformed = false;
         string ArithOperator;
         private List<string> historyList;
 
@@ -21,11 +21,11 @@ namespace Simple_Calculator
 
         private void button_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (operationPerformed)
             {
                 txtResult.Clear();
             }
-            
+            operationPerformed = false;
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
             //lblTempResult.Text += button.Text;
@@ -38,13 +38,13 @@ namespace Simple_Calculator
             {
                 btnEqual.PerformClick();
                 ArithOperator = button.Text;
-                
+                operationPerformed = true;
             }
             else
             {
                 ArithOperator = button.Text;
                 valOne = Int32.Parse(txtResult.Text);
-                
+                operationPerformed = true;
             }
         }
 
