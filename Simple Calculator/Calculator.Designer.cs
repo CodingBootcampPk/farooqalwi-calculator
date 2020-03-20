@@ -49,6 +49,7 @@
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -305,12 +306,21 @@
             this.btnHistory.UseVisualStyleBackColor = false;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(417, 34);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(359, 329);
+            this.listBox1.TabIndex = 6;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(363, 393);
+            this.ClientSize = new System.Drawing.Size(874, 393);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -349,6 +359,7 @@
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnClearLbl;
         private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
