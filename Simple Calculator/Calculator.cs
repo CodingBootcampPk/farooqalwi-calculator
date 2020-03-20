@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Simple_Calculator
@@ -9,10 +10,14 @@ namespace Simple_Calculator
         int valOne = 0;
         int valTwo = 0;
         string ArithOperator;
+
+        private List<Calculator> history;
         
         public Calculator()
         {
             InitializeComponent();
+
+            history = new List<Calculator>();
         }
 
         private void button_Click(object sender, EventArgs e)

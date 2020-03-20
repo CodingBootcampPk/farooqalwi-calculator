@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClearLbl = new System.Windows.Forms.Button();
             this.lblTempResult = new System.Windows.Forms.Label();
             this.txtResult = new System.Windows.Forms.TextBox();
             this.btnDiv = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.btnClearLbl = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,18 @@
             this.groupBox1.Size = new System.Drawing.Size(352, 355);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnClearLbl
+            // 
+            this.btnClearLbl.BackColor = System.Drawing.Color.Gray;
+            this.btnClearLbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearLbl.Location = new System.Drawing.Point(270, 13);
+            this.btnClearLbl.Name = "btnClearLbl";
+            this.btnClearLbl.Size = new System.Drawing.Size(75, 33);
+            this.btnClearLbl.TabIndex = 3;
+            this.btnClearLbl.Text = "←";
+            this.btnClearLbl.UseVisualStyleBackColor = false;
+            this.btnClearLbl.Click += new System.EventHandler(this.btnClearLbl_Click);
             // 
             // lblTempResult
             // 
@@ -279,18 +291,6 @@
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
             this.btnZero.Click += new System.EventHandler(this.button_Click);
-            // 
-            // btnClearLbl
-            // 
-            this.btnClearLbl.BackColor = System.Drawing.Color.Gray;
-            this.btnClearLbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearLbl.Location = new System.Drawing.Point(270, 13);
-            this.btnClearLbl.Name = "btnClearLbl";
-            this.btnClearLbl.Size = new System.Drawing.Size(75, 33);
-            this.btnClearLbl.TabIndex = 3;
-            this.btnClearLbl.Text = "←";
-            this.btnClearLbl.UseVisualStyleBackColor = false;
-            this.btnClearLbl.Click += new System.EventHandler(this.btnClearLbl_Click);
             // 
             // Calculator
             // 
