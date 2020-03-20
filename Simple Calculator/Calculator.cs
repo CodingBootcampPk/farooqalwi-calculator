@@ -10,14 +10,12 @@ namespace Simple_Calculator
         int valOne = 0;
         int valTwo = 0;
         string ArithOperator;
-
-        private List<Calculator> history;
+        private List<Calculator> historyList;
         
         public Calculator()
         {
             InitializeComponent();
-
-            history = new List<Calculator>();
+            historyList = new List<Calculator>();
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -86,7 +84,7 @@ namespace Simple_Calculator
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-
+            historyList.Add(lblTempResult.Text);
         }
     }
 }
