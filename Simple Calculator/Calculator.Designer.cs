@@ -48,6 +48,7 @@
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             this.groupBox1.Controls.Add(this.btnTwo);
             this.groupBox1.Controls.Add(this.btnEqual);
             this.groupBox1.Controls.Add(this.btnZero);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(6, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 355);
             this.groupBox1.TabIndex = 0;
@@ -292,12 +293,25 @@
             this.btnZero.UseVisualStyleBackColor = false;
             this.btnZero.Click += new System.EventHandler(this.button_Click);
             // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.Gray;
+            this.btnHistory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistory.Location = new System.Drawing.Point(4, 1);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(87, 33);
+            this.btnHistory.TabIndex = 3;
+            this.btnHistory.Text = "History";
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(374, 380);
+            this.ClientSize = new System.Drawing.Size(363, 393);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -334,6 +348,7 @@
         private System.Windows.Forms.Label lblTempResult;
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnClearLbl;
+        private System.Windows.Forms.Button btnHistory;
     }
 }
 

@@ -83,5 +83,10 @@ namespace Simple_Calculator
             txtResult.Clear();
             lblTempResult.Text = "";
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

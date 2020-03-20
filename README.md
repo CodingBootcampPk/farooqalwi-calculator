@@ -14,6 +14,7 @@ a practice project to learn basics of C# and WinForm programming.
 8. Show result
 9. Show a sequence of operations on the screen.
 10. Add a button that will clear the sequence field.
+11. Add a "History" button. Clicking on which will print the list of operations performed on the console.
 
 See this mock UI for reference. It shows the result "15", and also shows the numbers and operators user pressed, "2+19+4-10" ,to get the result.
 
