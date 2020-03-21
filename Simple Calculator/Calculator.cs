@@ -7,9 +7,9 @@ namespace Simple_Calculator
     public partial class Calculator : Form
     {
         //variables which are being used
-        string First = "";
-        string Second = "";
-        string Operator = "";
+        string first = "";
+        string second = "";
+        string operatoration = "";
         
         public Calculator()
         {
@@ -19,21 +19,21 @@ namespace Simple_Calculator
         private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            First += button.Text;
+            first += button.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
         {
-            First = txtResult.Text;
+            first = txtResult.Text;
             Button button = (Button)sender;
-            Operator = button.Text;
+            operatoration = button.Text;
             txtResult.Clear();
             calculateResult();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            Second = txtResult.Text;
+            second = txtResult.Text;
             calculateResult();
         }
 
@@ -53,19 +53,19 @@ namespace Simple_Calculator
         private int calculateResult()
         {
             int result = 0;
-            switch (Operator)
+            switch (operatoration)
             {
                 case "+":
-                    result = (Int32.Parse(First) + Int32.Parse(Second));
+                    result = (Int32.Parse(first) + Int32.Parse(second));
                     break;
                 case "-":
-                    result = (Int32.Parse(First) - Int32.Parse(Second));
+                    result = (Int32.Parse(first) - Int32.Parse(second));
                     break;
                 case "*":
-                    result = (Int32.Parse(First) * Int32.Parse(Second));
+                    result = (Int32.Parse(first) * Int32.Parse(second));
                     break;
                 case "/":
-                    result = (Int32.Parse(First) / Int32.Parse(Second));
+                    result = (Int32.Parse(first) / Int32.Parse(second));
                     break;
 
             }
