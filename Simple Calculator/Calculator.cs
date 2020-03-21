@@ -7,10 +7,9 @@ namespace Simple_Calculator
     public partial class Calculator : Form
     {
         //variables which are being used
-        string valFirst = "";
-        string valSecond = "";
-        
-        string arithOperator;
+        string First = "";
+        string Second = "";
+        string Operator = "";
         
         public Calculator()
         {
@@ -20,24 +19,22 @@ namespace Simple_Calculator
         private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            valFirst += 
+            First += button.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
         {
-            valOne = txtResult.Text;
+            First = txtResult.Text;
             Button button = (Button)sender;
-            ArithOperator = button.Text;
+            Operator = button.Text;
             txtResult.Clear();
-            CalCulateResult();
-
+            calculateResult();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            valTwo = txtResult.Text;
-            CalCulateResult();
-            txtResult.Text = result;
+            Second = txtResult.Text;
+            calculateResult();
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
@@ -53,31 +50,27 @@ namespace Simple_Calculator
             }
         }
 
-        private int CalculateResult()
+        private int calculateResult()
         {
             int result = 0;
-            switch (ArithOperator)
+            switch (Operator)
             {
                 case "+":
-                    result = (Int32.Parse(valOne) + Int32.Parse(valTwo));
+                    result = (Int32.Parse(First) + Int32.Parse(Second));
                     break;
                 case "-":
-                    result = (Int32.Parse(valOne) - Int32.Parse(valTwo));
+                    result = (Int32.Parse(First) - Int32.Parse(Second));
                     break;
                 case "*":
-                    result = (Int32.Parse(valOne) * Int32.Parse(valTwo));
+                    result = (Int32.Parse(First) * Int32.Parse(Second));
                     break;
                 case "/":
-                    result = (Int32.Parse(valOne) / Int32.Parse(valTwo));
+                    result = (Int32.Parse(First) / Int32.Parse(Second));
                     break;
 
             }
             return result;
         }
 
-        private void numberButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

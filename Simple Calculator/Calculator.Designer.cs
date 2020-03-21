@@ -134,7 +134,7 @@
             this.btnNine.TabIndex = 0;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = false;
-            this.btnNine.Click += new System.EventHandler(this.button_Click);
+            this.btnNine.Click += new System.EventHandler(this.number_Click);
             // 
             // btnSub
             // 
@@ -158,7 +158,7 @@
             this.btnFour.TabIndex = 0;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = false;
-            this.btnFour.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnFour.Click += new System.EventHandler(this.number_Click);
             // 
             // btnFive
             // 
@@ -170,7 +170,7 @@
             this.btnFive.TabIndex = 0;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = false;
-            this.btnFive.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnFive.Click += new System.EventHandler(this.number_Click);
             // 
             // btnThree
             // 
@@ -182,7 +182,7 @@
             this.btnThree.TabIndex = 0;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = false;
-            this.btnThree.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnThree.Click += new System.EventHandler(this.number_Click);
             // 
             // btnMul
             // 
@@ -206,7 +206,7 @@
             this.btnSeven.TabIndex = 0;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = false;
-            this.btnSeven.Click += new System.EventHandler(this.button_Click);
+            this.btnSeven.Click += new System.EventHandler(this.number_Click);
             // 
             // btnEight
             // 
@@ -218,7 +218,7 @@
             this.btnEight.TabIndex = 0;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = false;
-            this.btnEight.Click += new System.EventHandler(this.button_Click);
+            this.btnEight.Click += new System.EventHandler(this.number_Click);
             // 
             // btnSix
             // 
@@ -230,7 +230,7 @@
             this.btnSix.TabIndex = 0;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = false;
-            this.btnSix.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnSix.Click += new System.EventHandler(this.number_Click);
             // 
             // btnAdd
             // 
@@ -254,7 +254,7 @@
             this.btnOne.TabIndex = 0;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = false;
-            this.btnOne.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnOne.Click += new System.EventHandler(this.number_Click);
             // 
             // btnTwo
             // 
@@ -266,7 +266,7 @@
             this.btnTwo.TabIndex = 0;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = false;
-            this.btnTwo.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnTwo.Click += new System.EventHandler(this.number_Click);
             // 
             // btnEqual
             // 
@@ -290,7 +290,7 @@
             this.btnZero.TabIndex = 0;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
-            this.btnZero.Click += new System.EventHandler(this.numberButton_Click);
+            this.btnZero.Click += new System.EventHandler(this.number_Click);
             // 
             // btnHistory
             // 
