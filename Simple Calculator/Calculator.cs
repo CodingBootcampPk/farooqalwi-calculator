@@ -10,7 +10,6 @@ namespace Simple_Calculator
         string first = "";
         string second = "";
         string operation = "";
-        bool operationPerformed = false;
         
         public Calculator()
         {
@@ -20,13 +19,13 @@ namespace Simple_Calculator
         private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (operationPerformed)
+            if (operation=="")
             {
-                second += button.Text;
+                first += button.Text;
             }
             else
             {
-                first += button.Text;
+                second += button.Text;
             }
         }
 
@@ -34,7 +33,6 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             operation = button.Text;
-            operationPerformed = true;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -44,7 +42,6 @@ namespace Simple_Calculator
             txtResult.Text = result.ToString();
             first = "";
             second = "";
-            operationPerformed = false;
         }
 
         private int calculateResult()
