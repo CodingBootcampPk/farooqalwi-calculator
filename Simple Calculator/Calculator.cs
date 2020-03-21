@@ -44,6 +44,8 @@ namespace Simple_Calculator
             result = calculateResult();
             txtResult.Text = result.ToString();
             first = "";
+            second = "";
+            operationPerformed = false;
         }
 
 
