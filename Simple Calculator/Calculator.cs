@@ -20,7 +20,7 @@ namespace Simple_Calculator
         private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            txtResult.Text = txtResult.Text + button.Text;
+            valFirst += 
         }
 
         private void operators_Click(object sender, EventArgs e)
@@ -53,30 +53,24 @@ namespace Simple_Calculator
             }
         }
 
-        string  CalCulateResult()
+        private int CalculateResult()
         {
+            int result = 0;
             switch (ArithOperator)
             {
                 case "+":
-                    result = (Int32.Parse(valOne) + Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) + Int32.Parse(valTwo));
                     break;
                 case "-":
-                    result = (Int32.Parse(valOne) - Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) - Int32.Parse(valTwo));
                     break;
                 case "*":
-                    result = (Int32.Parse(valOne) * Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) * Int32.Parse(valTwo));
                     break;
                 case "/":
-                    if (txtResult.Text != "0")
-                    {
-                        result = (Int32.Parse(valOne) / Int32.Parse(valTwo)).ToString();
-                    }
-                    else
-                    {
-                        txtResult.Clear();
-                        MessageBox.Show("Cannot Divide by Zero", "Divide by Zero Error");
-                    }
+                    result = (Int32.Parse(valOne) / Int32.Parse(valTwo));
                     break;
+
             }
             return result;
         }
