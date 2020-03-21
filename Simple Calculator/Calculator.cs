@@ -22,10 +22,12 @@ namespace Simple_Calculator
             if (operation == "")
             {
                 first += button.Text;
+                txtResult.Text = first;
             }
             else
             {
                 second += button.Text;
+                txtResult.Text = second;
             }
         }
 
