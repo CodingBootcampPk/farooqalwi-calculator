@@ -9,9 +9,9 @@ namespace Simple_Calculator
         //variables which are being used
         string valOne = "";
         string valTwo = "";
+        string result = "";
         string ArithOperator;
         
-
         public Calculator()
         {
             InitializeComponent();
@@ -34,6 +34,7 @@ namespace Simple_Calculator
         private void btnEqual_Click(object sender, EventArgs e)
         {
             valTwo = txtResult.Text;
+            txtResult.Clear();
             CalCulateResult();
         }
 
@@ -55,18 +56,18 @@ namespace Simple_Calculator
             switch (ArithOperator)
             {
                 case "+":
-                    txtResult.Text = (Int32.Parse(valOne) + Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) + Int32.Parse(valTwo)).ToString();
                     break;
                 case "-":
-                    txtResult.Text = (Int32.Parse(valOne) - Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) - Int32.Parse(valTwo)).ToString();
                     break;
                 case "*":
-                    txtResult.Text = (Int32.Parse(valOne) * Int32.Parse(valTwo)).ToString();
+                    result = (Int32.Parse(valOne) * Int32.Parse(valTwo)).ToString();
                     break;
                 case "/":
                     if (txtResult.Text != "0")
                     {
-                        txtResult.Text = (Int32.Parse(valOne) / Int32.Parse(valTwo)).ToString();
+                        result = (Int32.Parse(valOne) / Int32.Parse(valTwo)).ToString();
                     }
                     else
                     {
@@ -75,7 +76,7 @@ namespace Simple_Calculator
                     }
                     break;
             }
-            return txtResult.Text;
+            return result;
         }
     }
 }
