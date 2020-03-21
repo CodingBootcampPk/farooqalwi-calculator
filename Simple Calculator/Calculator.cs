@@ -35,6 +35,13 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             operation = button.Text;
+            if (second != "")
+            {
+                int result = calculateResult();
+                first = result.ToString();
+                txtResult.Text = result.ToString();
+                second = "";
+            }
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
