@@ -24,11 +24,8 @@ namespace Simple_Calculator
 
         private void operators_Click(object sender, EventArgs e)
         {
-            first = txtResult.Text;
             Button button = (Button)sender;
             operation = button.Text;
-            txtResult.Clear();
-            calculateResult();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -36,7 +33,6 @@ namespace Simple_Calculator
             int result = 0;
             result = calculateResult();
             txtResult.Text = result.ToString();
-            
         }
 
 
