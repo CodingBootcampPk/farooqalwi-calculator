@@ -39,18 +39,6 @@ namespace Simple_Calculator
             
         }
 
-        private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Want to close Calculator?", "Calculator", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                //Auto Cancel
-            }
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
 
         private int calculateResult()
         {
