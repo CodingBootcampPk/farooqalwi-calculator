@@ -33,7 +33,9 @@ namespace Simple_Calculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            second = txtResult.Text;
+            int farooq = 0;
+            farooq = calculateResult();
+            //second = txtResult.Text;
             calculateResult();
         }
 
