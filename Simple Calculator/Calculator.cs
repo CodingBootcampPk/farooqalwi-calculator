@@ -9,7 +9,7 @@ namespace Simple_Calculator
         //variables which are being used
         string first = "";
         string second = "";
-        string operatoration = "";
+        string operation = "";
         
         public Calculator()
         {
@@ -26,7 +26,7 @@ namespace Simple_Calculator
         {
             first = txtResult.Text;
             Button button = (Button)sender;
-            operatoration = button.Text;
+            operation = button.Text;
             txtResult.Clear();
             calculateResult();
         }
@@ -53,7 +53,7 @@ namespace Simple_Calculator
         private int calculateResult()
         {
             int result = 0;
-            switch (operatoration)
+            switch (operation)
             {
                 case "+":
                     result = (Int32.Parse(first) + Int32.Parse(second));
