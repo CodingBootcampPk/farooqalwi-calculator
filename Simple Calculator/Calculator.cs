@@ -47,7 +47,6 @@ namespace Simple_Calculator
             operationPerformed = false;
         }
 
-
         private int calculateResult()
         {
             int result = 0;
