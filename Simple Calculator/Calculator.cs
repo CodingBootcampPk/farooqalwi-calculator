@@ -42,6 +42,7 @@ namespace Simple_Calculator
             txtResult.Text = result.ToString();
             first = "";
             second = "";
+            operation = "";
         }
 
         private int calculateResult()
