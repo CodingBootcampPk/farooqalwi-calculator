@@ -89,7 +89,6 @@
             this.btnClearLbl.TabIndex = 3;
             this.btnClearLbl.Text = "←";
             this.btnClearLbl.UseVisualStyleBackColor = false;
-            this.btnClearLbl.Click += new System.EventHandler(this.btnClearLbl_Click);
             // 
             // lblTempResult
             // 
@@ -303,7 +302,6 @@
             this.btnHistory.TabIndex = 3;
             this.btnHistory.Text = "History";
             this.btnHistory.UseVisualStyleBackColor = false;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // Calculator
             // 
