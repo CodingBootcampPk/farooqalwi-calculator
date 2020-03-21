@@ -21,20 +21,37 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
-            
         }
 
         private void operators_Click(object sender, EventArgs e)
         {
+            valOne = txtResult.Text;
             Button button = (Button)sender;
             ArithOperator = button.Text;
-            valOne += txtResult.Text;
             txtResult.Clear();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             valTwo = txtResult.Text;
+            CalCulateResult();
+        }
+
+        private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Want to close Calculator?", "Calculator", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                //Auto Cancel
+            }
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        string  CalCulateResult()
+        {
             switch (ArithOperator)
             {
                 case "+":
@@ -58,19 +75,7 @@ namespace Simple_Calculator
                     }
                     break;
             }
-        }
-
-        private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Want to close Calculator?", "Calculator", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                //Auto Cancel
-            }
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+            return txtResult.Text;
         }
     }
 }
