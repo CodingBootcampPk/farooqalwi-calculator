@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Simple_Calculator
 {
     public partial class Calculator : Form
     {
-        //variables which are being used
         string first = "";
         string second = "";
         string operation = "";
