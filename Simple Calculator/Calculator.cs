@@ -40,9 +40,7 @@ namespace Simple_Calculator
             int result = 0;
             result = calculateResult();
             txtResult.Text = result.ToString();
-            first = "";
-            second = "";
-            operation = "";
+            reset();
         }
 
         private int calculateResult()
@@ -67,5 +65,11 @@ namespace Simple_Calculator
             return result;
         }
 
+        private void reset()
+        {
+            first = "";
+            second = "";
+            operation = "";
+        }
     }
 }
