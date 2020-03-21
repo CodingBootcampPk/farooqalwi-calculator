@@ -19,14 +19,13 @@ namespace Simple_Calculator
 
         private void number_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
             if (operationPerformed)
             {
-                Button button = (Button)sender;
                 second += button.Text;
             }
             else
             {
-                Button button = (Button)sender;
                 first += button.Text;
             }
         }
