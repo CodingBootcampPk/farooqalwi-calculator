@@ -22,11 +22,13 @@ namespace Simple_Calculator
             if (operationPerformed)
             {
                 Button button = (Button)sender;
+                second += button.Text;
+            }
+            else
+            {
+                Button button = (Button)sender;
                 first += button.Text;
             }
-
-            Button button = (Button)sender;
-            second += button.Text;
         }
 
         private void operators_Click(object sender, EventArgs e)
