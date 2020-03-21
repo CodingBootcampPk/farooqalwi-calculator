@@ -7,17 +7,17 @@ namespace Simple_Calculator
     public partial class Calculator : Form
     {
         //variables which are being used
-        string valOne = "";
-        string valTwo = "";
-        string result = "";
-        string ArithOperator;
+        string valFirst = "";
+        string valSecond = "";
+        
+        string arithOperator;
         
         public Calculator()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             txtResult.Text = txtResult.Text + button.Text;
@@ -29,13 +29,15 @@ namespace Simple_Calculator
             Button button = (Button)sender;
             ArithOperator = button.Text;
             txtResult.Clear();
+            CalCulateResult();
+
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             valTwo = txtResult.Text;
-            txtResult.Clear();
             CalCulateResult();
+            txtResult.Text = result;
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
@@ -77,6 +79,11 @@ namespace Simple_Calculator
                     break;
             }
             return result;
+        }
+
+        private void numberButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
