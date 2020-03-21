@@ -35,8 +35,7 @@ namespace Simple_Calculator
         {
             int farooq = 0;
             farooq = calculateResult();
-            //second = txtResult.Text;
-            calculateResult();
+            
         }
 
         private void Calculator_FormClosing(object sender, FormClosingEventArgs e)
