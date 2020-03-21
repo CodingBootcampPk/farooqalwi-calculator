@@ -33,8 +33,9 @@ namespace Simple_Calculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            int farooq = 0;
-            farooq = calculateResult();
+            int result = 0;
+            result = calculateResult();
+            txtResult.Text = result.ToString();
             
         }
 
