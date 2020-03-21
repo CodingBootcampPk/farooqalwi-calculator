@@ -5,13 +5,15 @@ namespace Simple_Calculator
 {
     public partial class Calculator : Form
     {
-        string first = "";
-        string second = "";
-        string operation = "";
+        string first;
+        string second;
+        string operation;
 
         public Calculator()
         {
             InitializeComponent();
+
+            reset();
         }
 
         private void number_Click(object sender, EventArgs e)
