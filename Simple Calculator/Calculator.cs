@@ -10,7 +10,7 @@ namespace Simple_Calculator
         string first = "";
         string second = "";
         string operation = "";
-        
+
         public Calculator()
         {
             InitializeComponent();
@@ -19,7 +19,7 @@ namespace Simple_Calculator
         private void number_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (operation=="")
+            if (operation == "")
             {
                 first += button.Text;
             }
