@@ -33,6 +33,7 @@ namespace Simple_Calculator
         {
             Button button = (Button)sender;
             operation = button.Text;
+            operationPerformed = true;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
