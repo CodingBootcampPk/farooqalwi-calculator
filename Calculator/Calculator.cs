@@ -32,20 +32,29 @@ namespace Calculator
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (operation == "")
+            if (second=="")
             {
                 operation = button.Text;
             }
             else
             {
-                callEqual();
+                int result;
+                result = calculateResult();
+                txtResult.Text = result.ToString();
+                operation = button.Text;
+                second = "";
+                first = result.ToString();
             }
             
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            callEqual();
+            int result;
+            result = calculateResult();
+            txtResult.Text = result.ToString();
+            reset();
+            first = result.ToString();
         }
 
         private int calculateResult()
@@ -74,14 +83,6 @@ namespace Calculator
             first = "";
             second = "";
             operation = "";
-        }
-        private void callEqual()
-        {
-            int result;
-            result = calculateResult();
-            txtResult.Text = result.ToString();
-            reset();
-            first = result.ToString();
         }
     }
 }
