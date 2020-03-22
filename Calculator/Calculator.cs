@@ -41,9 +41,9 @@ namespace Calculator
                 int result;
                 result = calculateResult();
                 txtResult.Text = result.ToString();
+                first = result.ToString();
                 operation = button.Text;
                 second = "";
-                first = result.ToString();
             }
             
         }
