@@ -8,6 +8,7 @@ namespace Calculator
         string first;
         string second;
         string operation;
+
         public Calculator()
         {
             InitializeComponent();
@@ -44,7 +45,6 @@ namespace Calculator
                 operation = button.Text;
                 second = "";
             }
-
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
