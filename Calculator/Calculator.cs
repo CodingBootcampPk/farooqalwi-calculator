@@ -38,8 +38,7 @@ namespace Calculator
             }
             else
             {
-                int result;
-                result = calculateResult();
+                int result = calculateResult();
                 txtResult.Text = result.ToString();
                 first = result.ToString();
                 operation = button.Text;
@@ -50,8 +49,7 @@ namespace Calculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            int result;
-            result = calculateResult();
+            int result = calculateResult();
             txtResult.Text = result.ToString();
             reset();
             first = result.ToString();
