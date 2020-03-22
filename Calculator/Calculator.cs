@@ -32,7 +32,7 @@ namespace Calculator
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (second=="")
+            if (second == "")
             {
                 operation = button.Text;
             }
@@ -45,7 +45,7 @@ namespace Calculator
                 operation = button.Text;
                 second = "";
             }
-            
+
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
